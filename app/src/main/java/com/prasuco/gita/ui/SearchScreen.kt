@@ -100,7 +100,7 @@ fun SearchScreen(repo: Repository, openVerse: (Int, Int) -> Unit) {
         }
     }
     Surface(Modifier.fillMaxSize(), color = Bg) {
-        Column(Modifier.fillMaxSize()) {
+        Column(Modifier.fillMaxSize().imePadding()) {
             Column(Modifier.padding(horizontal = 20.dp).padding(top = 20.dp)) {
                 ScreenTitle("Search")
                 Spacer(Modifier.height(12.dp))

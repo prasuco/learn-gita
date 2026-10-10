@@ -64,7 +64,11 @@ fun VerseScreen(repo: Repository, ch: Int, v: Int, onBack: () -> Unit) {
     val tr = trs.firstOrNull { it.source == trSel } ?: trs.firstOrNull()
     val cm = cms.firstOrNull { it.source == cmSel } ?: cms.firstOrNull()
     Surface(Modifier.fillMaxSize(), color = Bg) {
-        Column(Modifier.fillMaxSize()) {
+        Column(
+            Modifier.fillMaxSize()
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Bottom))
+                .imePadding()
+        ) {
             TopBarBack("$ch.$v", chapterName.ifBlank { null }, onBack)
             LazyColumn(Modifier.fillMaxSize().weight(1f).padding(horizontal = 20.dp), contentPadding = PaddingValues(top = 12.dp, bottom = 12.dp)) {
             item {

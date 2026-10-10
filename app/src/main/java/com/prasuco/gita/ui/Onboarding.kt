@@ -73,7 +73,11 @@ fun OnboardingScreen(repo: Repository, onDone: () -> Unit) {
     }
 
     Surface(Modifier.fillMaxSize(), color = Bg) {
-        Column(Modifier.fillMaxSize().padding(24.dp)) {
+        Column(
+            Modifier.fillMaxSize()
+                .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Bottom))
+                .padding(24.dp)
+        ) {
             LinearProgressIndicator(
                 progress = { progress }, modifier = Modifier.fillMaxWidth().height(12.dp).clip(RoundedCornerShape(8.dp)),
                 color = Gold, trackColor = Divider
