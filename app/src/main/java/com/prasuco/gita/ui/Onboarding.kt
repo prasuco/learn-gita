@@ -36,7 +36,7 @@ private data class IntroPage(
 private val INTROS = listOf(
     IntroPage(
         "A verse every morning",
-        "One saying from Krishna, same for everyone.\nThirty seconds, no pressure, no grind.",
+        "One saying from Krishna, same for everyone.\nThirty seconds. No pressure, no grind.",
         "I", Color(0xFF7C2D12), Color(0xFFFDE68A)
     ),
     IntroPage(

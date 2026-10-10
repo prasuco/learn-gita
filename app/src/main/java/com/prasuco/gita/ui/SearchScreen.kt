@@ -41,17 +41,17 @@ val DILEMMAS = listOf(
     ),
     Dilemma(
         "Grief",
-        "Krishna does not ask the grieving to stop feeling — he widens the frame. What you love is not only the form that passed; the essence continues, and sorrow itself is a season, not a home. Sorrow is a season, not a home.",
+        "Krishna does not ask the grieving to stop feeling. He widens the frame. What you love is not only the form that passed; the essence continues. Sorrow is a season, not a home.",
         listOf(2 to 20, 2 to 14, 2 to 27, 18 to 66)
     ),
     Dilemma(
         "Indecision",
-        "Arjuna was frozen exactly where you are — between two painful options. Krishna's method: get honest counsel, weigh your duty over your comfort, reflect deeply, and then choose with your whole heart. Clarity follows commitment, rarely the other way around.",
+        "Arjuna was frozen exactly where you are, between two painful options. Krishna's method: get honest counsel, weigh your duty over your comfort, reflect deeply, and then choose with your whole heart. Clarity follows commitment, rarely the other way around.",
         listOf(2 to 7, 18 to 63, 3 to 35, 2 to 48)
     ),
     Dilemma(
         "Duty",
-        "Your duty is not the most impressive task available — it is the one that is yours. Krishna ranks an imperfectly done own-duty above a perfectly done borrowed one. Stop auditioning for someone else's role; play your position fully.",
+        "Your duty is not the most impressive task available. It is the one that is yours. Krishna ranks an imperfectly done own-duty above a perfectly done borrowed one. Stop auditioning for someone else's role; play your position fully.",
         listOf(2 to 47, 2 to 31, 3 to 35, 3 to 21)
     ),
     Dilemma(
@@ -61,7 +61,7 @@ val DILEMMAS = listOf(
     ),
     Dilemma(
         "Burnout",
-        "Burnout is rarely about working hard — it is about working anxiously, pulled by craving and dread at once. Krishna prescribes evenness: same mind in effort and rest, in praise and blame. Recover your rhythm first; the output will follow.",
+        "Burnout is rarely about working hard. It is about working anxiously, pulled by craving and dread at once. Krishna prescribes evenness: same mind in effort and rest, in praise and blame. Recover your rhythm first; the output will follow.",
         listOf(2 to 48, 6 to 5, 3 to 35, 2 to 47)
     )
 )

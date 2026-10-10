@@ -205,7 +205,7 @@ fun friendlySource(src: String): String = when (src) {
 
 fun reflectionFor(order: Int): List<String> {
     val bank = listOf(
-        "What duty in your life right now feels like Arjuna's — clear, yet hard to face?",
+        "What duty in your life right now feels like Arjuna's: clear, yet hard to face?",
         "Which line of this verse argues with how you acted yesterday?",
         "If you lived this verse for one day, what would you do differently before noon?",
         "What attachment does this verse quietly ask you to loosen?",

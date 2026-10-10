@@ -19,7 +19,7 @@ import com.prasuco.gita.data.Repository
 // ---------- about: mission, data source, privacy, feedback ----------
 
 private const val GITA_DATA_URL = "https://github.com/gita/gita"
-private const val ISSUES_URL = "https://github.com/prabincankod/learn-gita/issues"
+private const val ISSUES_URL = "https://github.com/prasuco/learn-gita/issues"
 
 @Composable
 fun AboutScreen(repo: Repository, onBack: () -> Unit) {
@@ -49,7 +49,7 @@ fun AboutScreen(repo: Repository, onBack: () -> Unit) {
                         Eyebrow("Mission")
                         Spacer(Modifier.height(8.dp))
                         Text(
-                            "One verse every morning, in plain English. No pressure, no grind — a quiet daily companion for the Bhagavad Gita.",
+                            "One verse every morning, in plain English. No pressure, no grind. A quiet daily companion for the Bhagavad Gita.",
                             fontSize = 15.sp, color = Ink, lineHeight = 23.sp
                         )
                     }
@@ -88,7 +88,7 @@ fun AboutScreen(repo: Repository, onBack: () -> Unit) {
                         Eyebrow("Privacy", Ink2)
                         Spacer(Modifier.height(8.dp))
                         Text(
-                            "Everything stays on your device. No account, no analytics, no network calls — your progress, bookmarks and notes never leave your phone.",
+                            "Everything stays on your device. No account, no analytics, no network calls. Your progress, bookmarks and notes never leave your phone.",
                             fontSize = 14.sp, color = Ink, lineHeight = 21.sp
                         )
                     }
