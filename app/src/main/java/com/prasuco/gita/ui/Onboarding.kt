@@ -13,9 +13,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -25,29 +23,23 @@ import kotlinx.coroutines.launch
 
 // ---------- onboarding: three intro pages + reminder ----------
 
-private data class IntroPage(
-    val title: String,
-    val sub: String,
-    val numeral: String,
-    val top: Color,
-    val bottom: Color
-)
+private data class IntroPage(val title: String, val sub: String, val art: Int)
 
 private val INTROS = listOf(
     IntroPage(
         "A verse every morning",
         "One saying from Krishna, same for everyone.\nThirty seconds. No pressure, no grind.",
-        "I", Color(0xFF7C2D12), Color(0xFFFDE68A)
+        0
     ),
     IntroPage(
         "Wisdom for hard days",
         "Anxious? Stuck? Grieving? Ask what you're\nfacing and get verses that speak to it.",
-        "II", Color(0xFF312E81), Color(0xFFA5B4FC)
+        1
     ),
     IntroPage(
         "Carry it with you",
         "A home-screen widget, a morning nudge,\nand verse cards saved to your gallery.",
-        "III", Color(0xFF0F172A), Color(0xFF64748B)
+        2
     )
 )
 
@@ -100,7 +92,7 @@ fun OnboardingScreen(repo: Repository, onDone: () -> Unit) {
                 ) {
                     if (s < INTROS.size) {
                         val page = INTROS[s]
-                        PlaceholderArt(page.numeral, page.top, page.bottom)
+                        OnboardArt(page.art)
                         Spacer(Modifier.height(20.dp))
                         Text(page.title, fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = Ink, textAlign = TextAlign.Center)
                         Spacer(Modifier.height(8.dp))
@@ -124,28 +116,6 @@ fun OnboardingScreen(repo: Repository, onDone: () -> Unit) {
                 }
             }
             if (pickTime) ReminderTimeDialog(hh, mm, { pickTime = false }, { h, m -> hh = h; mm = m; pickTime = false })
-        }
-    }
-}
-
-/** Placeholder art until real illustrations land: gradient card + serif numeral. */
-@Composable
-fun PlaceholderArt(numeral: String, top: Color, bottom: Color) {
-    val drift = rememberInfiniteTransition(label = "art")
-    val float by drift.animateFloat(0f, 1f, infiniteRepeatable(tween(3600), RepeatMode.Reverse), label = "float")
-    Box(
-        Modifier.fillMaxWidth().height(260.dp).clip(RoundedCornerShape(28.dp))
-            .background(Brush.verticalGradient(listOf(top, bottom))),
-        contentAlignment = Alignment.Center
-    ) {
-        Box(
-            Modifier.offset(y = (6 - float * 12).dp),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(
-                numeral, fontSize = 88.sp, fontWeight = FontWeight.Black,
-                fontFamily = FontFamily.Serif, color = Color.White.copy(alpha = 0.94f)
-            )
         }
     }
 }
